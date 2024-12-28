@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: black;
+}
+
+.header-container {
+    display: flex;
+    gap: 20px;
+    width: 90vw;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+h1, h2 {
+    color: white;
+}
+
+hr {
+    opacity: 0.5;
+}
+
+.card-container {
+    display: flex;
+    height: 60vh;
+    width: 90vw;
+    gap: 20px;
+}
+
+.card {
+  border-radius: 20px;
+  height: 100%;
+  flex: 1;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: flex 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.expanded {
+    flex: 5;
+  }
+
+.card h2 {
+    opacity: 0;
+    transition: opacity 0.2s;
+    font-size: 18px;
+}
+
+.card.expanded h2 {
+    opacity: 1;
+    transition: opacity 0.2s 50ms;
+}
+
+#card1 {
+    background-image: url("./photos/arches.jpeg");
+}
+#card2 {
+    background-image: url("./photos/bryceCanyon.jpeg");
+}
+#card3 {
+    background-image: url("./photos/grandCanyon.jpeg");
+}
+#card4 {
+    background-image: url("./photos/horseshoe.jpeg");
+}
+#card5 {
+    background-image: url("./photos/monument.jpeg");
+}
+
+@media (max-width: 900px) {
+    .card:nth-of-type(4), .card:nth-of-type(5) {
+        display: none;
+    }
+}
